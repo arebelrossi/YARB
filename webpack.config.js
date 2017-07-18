@@ -6,6 +6,7 @@ const appTitle = 'My App';
 
 module.exports = {
 	entry: './src/main.js',
+	devtool: 'inline-source-map',
 	devServer: {
 		contentBase: './dist'
 	},
