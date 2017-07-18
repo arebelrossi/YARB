@@ -1,4 +1,4 @@
-import exampleComponent from './components/Example/index.js';
+import exampleComponent from './components/Example/Example.js';
 
 function componentDiv() {
 	var cDiv = document.createElement('div');
