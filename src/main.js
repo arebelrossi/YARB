@@ -1,10 +1,5 @@
-import exampleComponent from './components/Example/Example.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Example from './components/Example/Example.jsx';
 
-function componentDiv() {
-	const cDiv = document.createElement('div');
-	cDiv.innerHTML = exampleComponent();
-
-	return cDiv;
-}
-
-document.body.appendChild(componentDiv());
+ReactDOM.render(<Example />, document.getElementById('root'));

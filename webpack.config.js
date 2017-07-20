@@ -13,7 +13,9 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			title: appTitle
+			template: './src/index.html',
+			filename: 'index.html',
+			inject: 'body'
 		})
 	],
 	module: {
@@ -22,15 +24,15 @@ module.exports = {
 				test: /\.css$/, 
 				use: ['style-loader','css-loader']
 			},
-			{ 
-				test: /\.js$/, 
-				exclude: /node_modules/, 
-				loader: "babel-loader"
+			{
+				test   :/\.jsx?$/,
+				exclude:/node_modules/,
+				loader :'babel-loader'
 			}
 		]
 	},
 	output: {
-		filename: 'index.js',
+		filename: 'index_bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	}
 };
